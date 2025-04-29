@@ -1,0 +1,765 @@
+// 変数
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$danger-color: #e74c3c;
+$text-color: #333;
+$light-gray: #f5f5f5;
+$gray: #ddd;
+$dark-gray: #666;
+$white: #fff;
+$black: #000;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// リセット
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $light-gray;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// コンテナ
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// ヘッダー
+.header {
+  background-color: $primary-color;
+  color: $white;
+  padding: 40px 0;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+}
+
+// メインコンテンツ
+.main {
+  padding: 40px 0;
+}
+
+// セクション
+.section {
+  margin-bottom: 60px;
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+// カードグリッド
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+// カード
+.card {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  transition: $transition;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: $text-color;
+  text-decoration: none;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &__content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: $dark-gray;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+
+  &__arrow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    color: $primary-color;
+    border-top: 1px solid $gray;
+  }
+}
+
+// フッター
+.footer {
+  background-color: $dark-gray;
+  color: $white;
+  padding: 20px 0;
+  text-align: center;
+
+  &__text {
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: $light-gray;
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// ボタン
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: $transition;
+  text-align: center;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  &--danger {
+    background-color: $danger-color;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+}
+
+// フォーム
+.form {
+  &__group {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: $transition;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+    }
+  }
+
+  &__error {
+    color: $danger-color;
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+}
+
+// メディアクエリ
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 0;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// 各サンプルページ用のスタイル
+// ステップフォーム
+.step-form {
+  &__progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: $gray;
+      z-index: 1;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &.active &-number {
+      background-color: $primary-color;
+    }
+
+    &.completed &-number {
+      background-color: $secondary-color;
+    }
+  }
+
+  &__step-number {
+    width: 30px;
+    height: 30px;
+    background-color: $gray;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__step-label {
+    font-size: 0.9rem;
+    color: $dark-gray;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+
+// モーダルオーバーレイ
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    display: flex;
+  }
+
+  &__content {
+    background-color: $white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $dark-gray;
+    transition: $transition;
+
+    &:hover {
+      color: $danger-color;
+    }
+  }
+
+  &__body {
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+
+// エンプティステート
+.empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+
+  &__icon {
+    font-size: 3rem;
+    color: $gray;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: $dark-gray;
+  }
+
+  &__description {
+    color: $dark-gray;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// カルーセル
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+
+  &__track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    &:nth-child(1) {
+      background-color: #3498db;
+    }
+    
+    &:nth-child(2) {
+      background-color: #2ecc71;
+    }
+    
+    &:nth-child(3) {
+      background-color: #e74c3c;
+    }
+    
+    &:nth-child(4) {
+      background-color: #9b59b6;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba($white, 0.5);
+    cursor: pointer;
+    transition: $transition;
+
+    &.active {
+      background-color: $white;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($white, 0.5);
+    color: $black;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition;
+    z-index: 10;
+
+    &:hover {
+      background-color: $white;
+    }
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+  }
+}
+
+// スクロールヒント
+.scroll-hint {
+  height: 400px;
+  overflow-y: auto;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  position: relative;
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__item {
+    padding: 15px;
+    border-bottom: 1px solid $gray;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $primary-color;
+    animation: bounce 2s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &-text {
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+// タブ
+.tabs {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  &__nav {
+    display: flex;
+    background-color: $light-gray;
+    border-bottom: 1px solid $gray;
+  }
+
+  &__link {
+    padding: 15px 20px;
+    color: $dark-gray;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: $transition;
+    cursor: pointer;
+
+    &.active {
+      color: $primary-color;
+      border-bottom-color: $primary-color;
+      background-color: $white;
+    }
+
+    &:hover:not(.active) {
+      background-color: darken($light-gray, 5%);
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+// リンクとボタン
+.links-buttons {
+  &__section {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray;
+  }
+
+  &__example {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__text-link {
+    color: $primary-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+
+  &__external-link {
+    display: inline-flex;
+    align-items: center;
+    color: $primary-color;
+    text-decoration: underline;
+
+    svg {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// バリデーション
+.validation {
+  &__form {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    padding: 20px;
+  }
+
+  &__requirements {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__requirement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: $dark-gray;
+
+    &.valid {
+      color: $secondary-color;
+    }
+
+    svg {
+      margin-right: 5px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// 入力コントロール
+.input-controls {
+  &__form {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    padding: 20px;
+  }
+
+  &__group {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__stepper {
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+  }
+
+  &__stepper-button {
+    width: 40px;
+    height: 40px;
+    background-color: $light-gray;
+    border: 1px solid $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: darken($light-gray, 5%);
+    }
+  }
+
+  &__stepper-input {
+    width: 60px;
+    height: 40px;
+    border: 1px solid $gray;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  &__radio-group {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__radio {
+    display: flex;
+    align-items: center;
+  }
+
+  &__radio-input {
+    margin-right: 5px;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: $white;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スクロールの先を示唆する | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">3-3. スクロールの先を示唆する</h1>
+      <p class="header__subtitle">コンテンツの切れ目が画面の端と揃っていると、ユーザーはスクロールできることに気づかない恐れがあります。コンテンツの位置を調整して示唆します。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>ユーザーにスクロールして見てもらいたい場合、コンテンツの切れ目が画面の端と揃っているとユーザーはスクロールできることに気づかない恐れがあります。画像や文字などのコンテンツの位置を調整することで、続きがありそうに見せ、その方向にスクロールができることを示唆します。</p>
+        
+        <!-- スクロールヒント -->
+        <div class="scroll-hint">
+          <div class="scroll-hint__content">
+            <h2>スクロールできるコンテンツ</h2>
+            <p>以下のリストは長いため、スクロールして全体を確認することができます。スクロールできることを示唆するインジケーターが表示されています。</p>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 1</h3>
+              <p>これはスクロール可能なコンテンツの例です。ユーザーがスクロールできることを示唆するために、コンテンツの一部が見切れるようにデザインされています。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 2</h3>
+              <p>スクロールの先を示唆することで、ユーザーは追加のコンテンツが存在することを理解し、スクロールして確認する可能性が高まります。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 3</h3>
+              <p>スクロールインジケーターやアニメーションを使用することで、ユーザーの注意を引き、スクロール操作を促すことができます。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 4</h3>
+              <p>モバイルデバイスでは特に、スクロールの存在を示唆することが重要です。画面サイズが限られているため、コンテンツが見切れていることを明示的に示す必要があります。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 5</h3>
+              <p>スクロールヒントは、ユーザーがコンテンツを見逃さないようにするための重要な視覚的手がかりです。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 6</h3>
+              <p>スクロールの先を示唆する方法としては、コンテンツの一部を見切れさせる、スクロールインジケーターを表示する、アニメーションを使用するなどがあります。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 7</h3>
+              <p>ユーザーがスクロールを開始すると、スクロールインジケーターは徐々に消えるようにデザインされています。これは、ユーザーがすでにスクロール操作を理解したことを示しています。</p>
+            </div>
+            
+            <div class="scroll-hint__item">
+              <h3>アイテム 8</h3>
+              <p>スクロールヒントは、特に初めてサイトやアプリを訪れるユーザーにとって重要な要素です。</p>
+            </div>
+          </div>
+          
+          <!-- スクロールインジケーター -->
+          <div class="scroll-hint__indicator">
+            <div class="scroll-hint__indicator-text">下にスクロール</div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カルーセル | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">3-2. カルーセルはドットインジケーターだけでなくボタンをつける</h1>
+      <p class="header__subtitle">カルーセルは、ドットインジケーターだけでなく、コンテンツをスライドするためのボタンをつけます。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>ドットインジケーターは現在表示しているコンテンツ位置を示すには有効的ですが、小さくクリックしづらいためコンテンツの切り替えにはあまり向いていません。カルーセルは、ドットインジケーターだけでなく、コンテンツをスライドするためのボタンをつけましょう。</p>
+        
+        <!-- カルーセル -->
+        <div class="carousel">
+          <div class="carousel__track">
+            <div class="carousel__slide">スライド 1</div>
+            <div class="carousel__slide">スライド 2</div>
+            <div class="carousel__slide">スライド 3</div>
+            <div class="carousel__slide">スライド 4</div>
+          </div>
+          
+          <!-- 前へ・次へボタン -->
+          <button class="carousel__button carousel__button--prev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="carousel__button carousel__button--next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <!-- ドットインジケーター -->
+          <div class="carousel__nav"></div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+          <h3>カルーセルのユーザビリティを向上させるポイント</h3>
+          <ul>
+            <li>ドットインジケーターだけでなく、前へ・次へボタンを設置する</li>
+            <li>現在のスライド位置を明確に示す</li>
+            <li>スライドの総数を視覚的に表現する</li>
+            <li>スライドの切り替わりにはアニメーションを使用して、変化を分かりやすくする</li>
+            <li>スマートフォンではスワイプ操作にも対応する</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

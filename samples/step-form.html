@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ステップフォーム | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">1-1. 入力項目が多いときはステップを分ける</h1>
+      <p class="header__subtitle">フォームの入力項目が多い場合は、項目をグルーピングして画面を分割し、ステッパーを設置して現在の進捗状況を明示します。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="step-form">
+        <!-- ステッパー -->
+        <div class="step-form__progress">
+          <div class="step-form__step active">
+            <div class="step-form__step-number">1</div>
+            <div class="step-form__step-label">基本情報</div>
+          </div>
+          <div class="step-form__step">
+            <div class="step-form__step-number">2</div>
+            <div class="step-form__step-label">連絡先情報</div>
+          </div>
+          <div class="step-form__step">
+            <div class="step-form__step-number">3</div>
+            <div class="step-form__step-label">アカウント情報</div>
+          </div>
+          <div class="step-form__step">
+            <div class="step-form__step-number">4</div>
+            <div class="step-form__step-label">確認</div>
+          </div>
+        </div>
+
+        <!-- フォームパネル -->
+        <div class="step-form__panel" style="display: block;">
+          <h2>基本情報</h2>
+          <div class="form__group">
+            <label class="form__label" for="name">氏名</label>
+            <input type="text" id="name" class="form__input" placeholder="山田 太郎">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="birthdate">生年月日</label>
+            <input type="date" id="birthdate" class="form__input">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="gender">性別</label>
+            <select id="gender" class="form__input">
+              <option value="">選択してください</option>
+              <option value="male">男性</option>
+              <option value="female">女性</option>
+              <option value="other">その他</option>
+              <option value="no_answer">回答しない</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="step-form__panel" style="display: none;">
+          <h2>連絡先情報</h2>
+          <div class="form__group">
+            <label class="form__label" for="email">メールアドレス</label>
+            <input type="email" id="email" class="form__input" placeholder="example@example.com">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">電話番号</label>
+            <input type="tel" id="phone" class="form__input" placeholder="090-1234-5678">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="address">住所</label>
+            <input type="text" id="address" class="form__input" placeholder="東京都渋谷区...">
+          </div>
+        </div>
+
+        <div class="step-form__panel" style="display: none;">
+          <h2>アカウント情報</h2>
+          <div class="form__group">
+            <label class="form__label" for="username">ユーザー名</label>
+            <input type="text" id="username" class="form__input" placeholder="username123">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="password">パスワード</label>
+            <input type="password" id="password" class="form__input">
+            <p class="form__hint">8文字以上、大文字・小文字・数字を含む必要があります</p>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="password_confirm">パスワード（確認）</label>
+            <input type="password" id="password_confirm" class="form__input">
+          </div>
+        </div>
+
+        <div class="step-form__panel" style="display: none;">
+          <h2>確認</h2>
+          <p>以下の内容で登録します。内容をご確認ください。</p>
+          <div class="form__summary">
+            <p><strong>氏名:</strong> <span id="summary_name">-</span></p>
+            <p><strong>生年月日:</strong> <span id="summary_birthdate">-</span></p>
+            <p><strong>性別:</strong> <span id="summary_gender">-</span></p>
+            <p><strong>メールアドレス:</strong> <span id="summary_email">-</span></p>
+            <p><strong>電話番号:</strong> <span id="summary_phone">-</span></p>
+            <p><strong>住所:</strong> <span id="summary_address">-</span></p>
+            <p><strong>ユーザー名:</strong> <span id="summary_username">-</span></p>
+          </div>
+          <div class="form__group">
+            <label class="form__checkbox">
+              <input type="checkbox" id="agree">
+              <span>利用規約とプライバシーポリシーに同意します</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ボタン -->
+        <div class="step-form__buttons">
+          <button class="btn btn--outline step-form__prev" style="display: none;">前へ</button>
+          <button class="btn step-form__next">次へ</button>
+          <button class="btn btn--secondary step-form__submit" style="display: none;">登録する</button>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">UIデザインの法則サンプル集</h1>
+      <p class="header__subtitle">実案件から学んだ、本当に役立つUIデザインの法則50</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="section">
+        <h2 class="section__title">1. システムステータスの可視化</h2>
+        <div class="card-grid">
+          <a href="samples/step-form.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">1-1. 入力項目が多いときはステップを分ける</h3>
+              <p class="card__description">フォームの入力項目が多い場合は、項目をグルーピングして画面を分割し、ステッパーを設置して現在の進捗状況を明示します。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="samples/modal-overlay.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">1-4. オーバーレイする時は背景を透過する</h3>
+              <p class="card__description">モーダルなどでオーバーレイを行う際は、背景を透過してユーザーに現在の状態や位置を伝えます。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="samples/empty-state.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">1-6. エンプティステートを用意する</h3>
+              <p class="card__description">データやコンテンツが入っていない空の状態を明示し、どうすればコンテンツが表示されるのかをナビゲートします。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">3. ユーザーのコントロールと自由度</h2>
+        <div class="card-grid">
+          <a href="samples/carousel.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">3-2. カルーセルはドットインジケーターだけでなくボタンをつける</h3>
+              <p class="card__description">カルーセルは、ドットインジケーターだけでなく、コンテンツをスライドするためのボタンをつけます。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="samples/scroll-hint.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">3-3. スクロールの先を示唆する</h3>
+              <p class="card__description">コンテンツの切れ目が画面の端と揃っていると、ユーザーはスクロールできることに気づかない恐れがあります。コンテンツの位置を調整して示唆します。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">4. 一貫性と標準化</h2>
+        <div class="card-grid">
+          <a href="samples/tabs.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">4-2. タブだとわかる見た目にする</h3>
+              <p class="card__description">タブとわかる見た目にし、タブメニューとコンテンツエリアが明確な領域で区切られるようにします。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="samples/links-buttons.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">4-5. リンクとボタンを使い分ける</h3>
+              <p class="card__description">リンクとボタンの機能や振る舞いを適切に使い分け、ユーザーが混乱しないようにします。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">5. エラー防止</h2>
+        <div class="card-grid">
+          <a href="samples/validation.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">5-6. リアルタイムバリデーションで条件の達成状況を明示する</h3>
+              <p class="card__description">複数の条件があるフォームは現在どの条件を達成しているかを明示することで入力エラーを未然に防ぎます。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="samples/input-controls.html" class="card">
+            <div class="card__content">
+              <h3 class="card__title">5-7. 手動入力を避ける</h3>
+              <p class="card__description">入力可能な要素に制限がある場合は、ユーザーによる手動入力を避け、選択可能な値のみを表示します。</p>
+            </div>
+            <div class="card__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

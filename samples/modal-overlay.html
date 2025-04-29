@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>モーダルオーバーレイ | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">1-4. オーバーレイする時は背景を透過する</h1>
+      <p class="header__subtitle">モーダルなどでオーバーレイを行う際は、背景を透過してユーザーに現在の状態や位置を伝えます。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>モーダルを表示すると、背景が透過されて現在の状態や位置が分かるようになっています。これにより、ユーザーは自分がどこにいるのかを把握しやすくなります。</p>
+        
+        <div style="margin: 30px 0;">
+          <button class="btn open-modal" data-modal="modal1">基本的なモーダル</button>
+          <button class="btn btn--secondary open-modal" data-modal="modal2">確認モーダル</button>
+          <button class="btn btn--danger open-modal" data-modal="modal3">警告モーダル</button>
+        </div>
+        
+        <div class="content-block">
+          <h2>コンテンツエリア</h2>
+          <p>これは通常のコンテンツエリアです。モーダルが表示されると、このコンテンツは背景として透過表示されます。</p>
+          <p>ボタンを押してモーダルを開くと、このコンテンツが背景として見えることで、ユーザーは現在の位置を把握できます。</p>
+          <p>モーダルが開いている間は、このコンテンツとの対話はできませんが、視覚的には見えているため、ユーザーは自分がどこにいるのかを理解しやすくなります。</p>
+          
+          <div style="margin-top: 20px;">
+            <h3>モーダルの利点</h3>
+            <ul>
+              <li>ユーザーの注意を特定のタスクに集中させることができる</li>
+              <li>重要な情報やアクションを強調できる</li>
+              <li>現在のコンテキストを維持したまま追加情報を表示できる</li>
+              <li>ページ遷移なしで追加のインタラクションを提供できる</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- モーダル1: 基本的なモーダル -->
+      <div id="modal1" class="modal">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h2 class="modal__title">基本的なモーダル</h2>
+            <button class="modal__close">&times;</button>
+          </div>
+          <div class="modal__body">
+            <p>これは基本的なモーダルウィンドウです。背景が透過されているため、ユーザーは現在のコンテキストを失うことなく、このモーダルに集中することができます。</p>
+            <p>モーダルの外側をクリックするか、右上の閉じるボタンをクリックすると閉じることができます。</p>
+          </div>
+          <div class="modal__footer">
+            <button class="btn modal__cancel">閉じる</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- モーダル2: 確認モーダル -->
+      <div id="modal2" class="modal">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h2 class="modal__title">確認</h2>
+            <button class="modal__close">&times;</button>
+          </div>
+          <div class="modal__body">
+            <p>変更を保存しますか？</p>
+            <p>この操作は元に戻すことができます。</p>
+          </div>
+          <div class="modal__footer">
+            <button class="btn modal__cancel">キャンセル</button>
+            <button class="btn btn--secondary">保存する</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- モーダル3: 警告モーダル -->
+      <div id="modal3" class="modal">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h2 class="modal__title">警告</h2>
+            <button class="modal__close">&times;</button>
+          </div>
+          <div class="modal__body">
+            <p>このアイテムを削除しますか？</p>
+            <p>この操作は取り消すことができません。</p>
+          </div>
+          <div class="modal__footer">
+            <button class="btn modal__cancel">キャンセル</button>
+            <button class="btn btn--danger">削除する</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
