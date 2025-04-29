@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リアルタイムバリデーション | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">5-6. リアルタイムバリデーションで条件の達成状況を明示する</h1>
+      <p class="header__subtitle">複数の条件があるフォームは現在どの条件を達成しているかを明示することで入力エラーを未然に防ぎます。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>パスワードやメールアドレスなど、特定の条件を満たす必要がある入力項目では、ユーザーが入力している途中で条件の達成状況をリアルタイムに表示することが効果的です。これにより、ユーザーは自分が何をすべきかを即座に理解でき、入力エラーを未然に防ぐことができます。</p>
+        
+        <!-- リアルタイムバリデーション -->
+        <div class="validation__form">
+          <h3 style="margin-bottom: 20px;">新しいパスワードを設定</h3>
+          
+          <div class="form__group">
+            <label for="password" class="form__label">パスワード</label>
+            <input type="password" id="password" class="form__input" placeholder="パスワードを入力してください">
+            
+            <div class="validation__requirements">
+              <p style="margin-bottom: 10px;">パスワードは以下の条件を満たす必要があります：</p>
+              
+              <div class="validation__requirement" data-requirement="length">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                </svg>
+                8文字以上
+              </div>
+              
+              <div class="validation__requirement" data-requirement="uppercase">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                </svg>
+                大文字を含む
+              </div>
+              
+              <div class="validation__requirement" data-requirement="lowercase">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                </svg>
+                小文字を含む
+              </div>
+              
+              <div class="validation__requirement" data-requirement="number">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                </svg>
+                数字を含む
+              </div>
+              
+              <div class="validation__requirement" data-requirement="special">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                </svg>
+                特殊文字を含む（!@#$%^&*など）
+              </div>
+            </div>
+          </div>
+          
+          <div class="form__group">
+            <label for="confirm-password" class="form__label">パスワード（確認）</label>
+            <input type="password" id="confirm-password" class="form__input" placeholder="パスワードを再入力してください">
+          </div>
+          
+          <button class="btn" style="margin-top: 20px;">パスワードを設定する</button>
+        </div>
+        
+        <div style="margin-top: 30px;">
+          <h3>リアルタイムバリデーションのデザインポイント</h3>
+          <ul>
+            <li>入力中にリアルタイムでフィードバックを提供する</li>
+            <li>達成済みの条件と未達成の条件を視覚的に区別する</li>
+            <li>アイコンや色を使って状態を明確に表示する</li>
+            <li>条件を明確かつ具体的に説明する</li>
+            <li>エラーメッセージは否定的な表現ではなく、何をすべきかを示す</li>
+            <li>すべての条件が満たされたら、送信ボタンを有効化するか視覚的に強調する</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

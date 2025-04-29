@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タブ | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">4-2. タブだとわかる見た目にする</h1>
+      <p class="header__subtitle">タブとわかる見た目にし、タブメニューとコンテンツエリアが明確な領域で区切られるようにします。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>タブUIは情報を整理して表示するのに効果的ですが、ユーザーがタブとして認識できる見た目にすることが重要です。タブメニューとコンテンツエリアが明確に区切られ、現在選択されているタブが視覚的に強調されるデザインにしましょう。</p>
+        
+        <!-- タブUI -->
+        <div class="tabs">
+          <div class="tabs__nav">
+            <a class="tabs__link active" data-tab="tab1">概要</a>
+            <a class="tabs__link" data-tab="tab2">特徴</a>
+            <a class="tabs__link" data-tab="tab3">使い方</a>
+            <a class="tabs__link" data-tab="tab4">よくある質問</a>
+          </div>
+          
+          <div class="tabs__content">
+            <div id="tab1" class="tabs__pane active">
+              <h3>製品概要</h3>
+              <p>この製品は、ユーザーのタスク管理を効率化するためのツールです。シンプルなインターフェースと直感的な操作性により、誰でも簡単に使い始めることができます。</p>
+              <p>主な機能としては、タスクの作成・編集・削除、期限の設定、優先度の管理、カテゴリ分け、進捗状況の追跡などがあります。</p>
+            </div>
+            
+            <div id="tab2" class="tabs__pane">
+              <h3>製品の特徴</h3>
+              <ul>
+                <li><strong>シンプルなUI:</strong> 直感的に操作できるインターフェース</li>
+                <li><strong>クラウド同期:</strong> 複数デバイス間でのデータ同期</li>
+                <li><strong>カスタマイズ:</strong> 自分好みにカスタマイズ可能</li>
+                <li><strong>通知機能:</strong> 期限が近づくとリマインダーを送信</li>
+                <li><strong>データ分析:</strong> タスク完了率や生産性の分析</li>
+              </ul>
+            </div>
+            
+            <div id="tab3" class="tabs__pane">
+              <h3>使い方</h3>
+              <ol>
+                <li>アカウントを作成またはログインする</li>
+                <li>「+」ボタンをクリックして新しいタスクを追加する</li>
+                <li>タスクのタイトル、説明、期限、優先度を設定する</li>
+                <li>タスクを適切なカテゴリに分類する</li>
+                <li>タスクが完了したらチェックボックスをクリックする</li>
+              </ol>
+            </div>
+            
+            <div id="tab4" class="tabs__pane">
+              <h3>よくある質問</h3>
+              <div style="margin-top: 15px;">
+                <p><strong>Q: 無料版と有料版の違いは何ですか？</strong></p>
+                <p>A: 無料版では基本的なタスク管理機能が利用できます。有料版ではクラウド同期、データ分析、高度なカスタマイズなどの追加機能が利用できます。</p>
+              </div>
+              <div style="margin-top: 15px;">
+                <p><strong>Q: データのバックアップはどうすればいいですか？</strong></p>
+                <p>A: 設定画面から「データのエクスポート」を選択すると、CSVまたはJSONファイルとしてデータをエクスポートできます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+          <h3>タブUIのデザインポイント</h3>
+          <ul>
+            <li>タブとわかる見た目にする（形状、配置、区切り線など）</li>
+            <li>選択中のタブを視覚的に強調する（色、下線、背景色など）</li>
+            <li>タブメニューとコンテンツエリアを明確に区切る</li>
+            <li>タブの数は多すぎないようにする（モバイル表示も考慮）</li>
+            <li>タブのラベルは簡潔で内容を適切に表現するものにする</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

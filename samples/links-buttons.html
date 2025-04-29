@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リンクとボタンを使い分ける | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">4-5. リンクとボタンを使い分ける</h1>
+      <p class="header__subtitle">リンクとボタンの機能や振る舞いを適切に使い分け、ユーザーが混乱しないようにします。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>リンクとボタンは異なる目的を持つUIコンポーネントです。リンクは別のページやコンテンツに移動するためのもの、ボタンはアクションを実行するためのものです。これらを適切に使い分けることで、ユーザーが操作の結果を予測しやすくなります。</p>
+        
+        <!-- リンクとボタンの例 -->
+        <div class="links-buttons__section">
+          <h3 class="links-buttons__title">リンクの例</h3>
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">テキストリンク:</span>
+            <a href="#" class="links-buttons__text-link">詳細ページへ</a>
+          </div>
+          
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">外部リンク:</span>
+            <a href="#" class="links-buttons__external-link" target="_blank" rel="noopener">
+              公式サイトを見る
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 3h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">ナビゲーションリンク:</span>
+            <div style="display: flex; gap: 15px;">
+              <a href="#" class="links-buttons__text-link">ホーム</a>
+              <a href="#" class="links-buttons__text-link">製品</a>
+              <a href="#" class="links-buttons__text-link">サービス</a>
+              <a href="#" class="links-buttons__text-link">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="links-buttons__section">
+          <h3 class="links-buttons__title">ボタンの例</h3>
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">プライマリボタン:</span>
+            <button class="btn">登録する</button>
+          </div>
+          
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">セカンダリボタン:</span>
+            <button class="btn btn--secondary">保存する</button>
+          </div>
+          
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">デンジャーボタン:</span>
+            <button class="btn btn--danger">削除する</button>
+          </div>
+          
+          <div class="links-buttons__example">
+            <span class="links-buttons__label">アウトラインボタン:</span>
+            <button class="btn btn--outline">キャンセル</button>
+          </div>
+        </div>
+        
+        <div class="links-buttons__section">
+          <h3 class="links-buttons__title">リンクとボタンの使い分け</h3>
+          <div style="margin-top: 15px;">
+            <h4>リンクを使うべき場合:</h4>
+            <ul>
+              <li>別のページや画面に移動する場合</li>
+              <li>新しいコンテンツを表示する場合</li>
+              <li>外部サイトに移動する場合</li>
+              <li>ナビゲーション要素として使用する場合</li>
+            </ul>
+          </div>
+          
+          <div style="margin-top: 15px;">
+            <h4>ボタンを使うべき場合:</h4>
+            <ul>
+              <li>フォームを送信する場合</li>
+              <li>データを保存・削除・更新する場合</li>
+              <li>モーダルを開く・閉じる場合</li>
+              <li>アプリケーションの状態を変更する場合</li>
+              <li>アクションを実行する場合</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+          <h3>リンクとボタンのデザインポイント</h3>
+          <ul>
+            <li>リンクとボタンの見た目を明確に区別する</li>
+            <li>リンクはテキストのスタイル（下線や色）で表現する</li>
+            <li>ボタンは立体的な見た目や境界線で表現する</li>
+            <li>重要度に応じてボタンのスタイルを変える</li>
+            <li>ボタンのラベルはアクションを表す動詞で始める</li>
+            <li>リンクのテキストは移動先を示す名詞や説明的な表現にする</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

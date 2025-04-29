@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手動入力を避ける | UIデザインの法則サンプル集</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">5-7. 手動入力を避ける</h1>
+      <p class="header__subtitle">入力可能な要素に制限がある場合は、ユーザーによる手動入力を避け、選択可能な値のみを表示します。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content">
+        <p>入力可能な値が限られている場合、ユーザーに自由に入力させるよりも、選択肢を提示する方が入力エラーを防ぐことができます。数値の入力、日付の選択、複数の選択肢からの選択など、適切な入力コントロールを使用することで、ユーザーの負担を減らし、データの正確性を高めることができます。</p>
+        
+        <!-- 入力コントロール -->
+        <div class="input-controls__form">
+          <h3 style="margin-bottom: 20px;">商品注文フォーム</h3>
+          
+          <!-- 数量ステッパー -->
+          <div class="input-controls__group">
+            <label class="input-controls__label">数量</label>
+            <div class="input-controls__stepper">
+              <div class="input-controls__stepper-button stepper-minus">-</div>
+              <input type="text" value="1" class="input-controls__stepper-input">
+              <div class="input-controls__stepper-button stepper-plus">+</div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--dark-gray); margin-top: 5px;">※最大10個まで注文可能</p>
+          </div>
+          
+          <!-- ラジオボタン -->
+          <div class="input-controls__group">
+            <label class="input-controls__label">サイズ</label>
+            <div class="input-controls__radio-group">
+              <label class="input-controls__radio">
+                <input type="radio" name="size" class="input-controls__radio-input" checked>
+                S
+              </label>
+              <label class="input-controls__radio">
+                <input type="radio" name="size" class="input-controls__radio-input">
+                M
+              </label>
+              <label class="input-controls__radio">
+                <input type="radio" name="size" class="input-controls__radio-input">
+                L
+              </label>
+              <label class="input-controls__radio">
+                <input type="radio" name="size" class="input-controls__radio-input">
+                XL
+              </label>
+            </div>
+          </div>
+          
+          <!-- スライダー -->
+          <div class="input-controls__group">
+            <label class="input-controls__label">予算: <span class="slider-value">5000</span>円</label>
+            <input type="range" min="1000" max="10000" value="5000" step="1000" class="input-controls__slider">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--dark-gray);">
+              <span>1,000円</span>
+              <span>10,000円</span>
+            </div>
+          </div>
+          
+          <!-- セレクトボックス -->
+          <div class="input-controls__group">
+            <label class="input-controls__label">配送方法</label>
+            <select class="input-controls__select">
+              <option value="standard">通常配送（3-5日）</option>
+              <option value="express">速達（1-2日）</option>
+              <option value="same-day">当日配送（18時まで）</option>
+              <option value="store">店舗受け取り</option>
+            </select>
+          </div>
+          
+          <!-- 日付選択 -->
+          <div class="input-controls__group">
+            <label class="input-controls__label">希望配達日</label>
+            <input type="date" class="form__input" min="2025-04-30">
+            <p style="font-size: 0.9rem; color: var(--dark-gray); margin-top: 5px;">※最短で翌日から選択可能</p>
+          </div>
+          
+          <button class="btn" style="margin-top: 20px;">注文する</button>
+        </div>
+        
+        <div style="margin-top: 30px;">
+          <h3>手動入力を避けるためのデザインポイント</h3>
+          <ul>
+            <li>入力値が限られている場合は、選択式のUIを提供する</li>
+            <li>数値入力にはステッパーやスライダーを使用する</li>
+            <li>日付や時間の入力には専用のピッカーを使用する</li>
+            <li>複数の選択肢からの選択にはドロップダウンやラジオボタンを使用する</li>
+            <li>入力可能な範囲や制限を明示する</li>
+            <li>モバイルでの使いやすさを考慮したコントロールを選択する</li>
+            <li>キーボード入力が必要な場合は、適切な入力タイプを指定する（数値キーボード、メールキーボードなど）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="back-link" style="margin-top: 30px;">
+        <a href="../index.html">&larr; トップページに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">このサンプル集は<a href="https://note.com/i3design_design/n/na5bc07e4acb0" target="_blank" rel="noopener">実案件から学んだ、本当に役立つUIデザインの法則50</a>を参考に作成されています。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
